@@ -231,7 +231,7 @@ def get_algos_config(cfg_dir):
 
     full_path = SSEP.join([cfg_dir, 'algos.yml'])
     with open(full_path, 'r') as ymlfile:
-        specs = yaml.load(ymlfile, Loader=yaml.FullLoader)
+        specs = yaml.load(ymlfile, Loader=yaml.SafeLoader)
 
     # Find optional packages
 
